@@ -2,10 +2,22 @@
 @import "tailwindcss";
 @import "tailwindcss-intersect";
 @plugin "tailwindcss-motion";
+@plugin "@iconify/tailwind4";
 @plugin "flyonui";
 @import "flyonui/variants.css"; /* Require only if you want to use FlyonUI JS component */
 
 @source "flyonui/dist/index.js"; /* Require only if you want to use FlyonUI JS component */
+
+@plugin "flyonui/theme" {
+    name: "light";
+    default: true;
+   /* --color-primary: #9d7a33;
+    --color-secondary: #0d0d0a;
+
+    --color-base-100: #0d0d0a;
+    --color-base-200: #0e0d0a;
+    --color-base-300: #0e0e0b;*/
+}
 
 
 
@@ -58,7 +70,4 @@ body {
     @media (prefers-color-scheme: dark) {
         color-scheme: dark;
     }
-}
-*:not(.shaped){
-    @apply rounded-none;
 }

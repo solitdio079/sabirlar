@@ -1,11 +1,12 @@
 import * as React from "react"
 import Layout from "../components/Layout"
+import Hero from "../components/Hero"
+import About from "../components/About"
 export default function IndexPage() {
   return (
     <Layout>
-      <h1 className="text-3xl my-5 font-bold underline">
-        Hello world!
-      </h1>
+      <Hero/>
+      <About/>
     </Layout>
   )
 }
