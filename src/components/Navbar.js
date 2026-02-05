@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`${isSticky ? "my-0 w-full fixed z-99 top-0": "my-6 w-9/10 absolute z-99  left-1/2 -translate-x-1/2 top-5"} navbar transition-all duration-500 rounded-box  mx-auto shadow-base-300/20 shadow-sm`}>
+      <nav className={`${isSticky ? "my-0 w-full fixed z-99 top-0": "my-6 w-9/10 absolute z-99  left-1/2 -translate-x-1/2 top-5"} navbar transition-all duration-500 rounded-none  mx-auto shadow-base-300/20 shadow-sm`}>
         <div className="w-full md:flex md:items-center md:gap-2">
           <div className="flex items-center justify-between">
             <div className="navbar-start items-center justify-between max-md:w-full">
@@ -45,10 +45,10 @@ export default function Navbar() {
           >
             <ul className="menu md:menu-horizontal gap-2 p-0 text-base max-md:mt-2">
               <li>
-                <a href="#">Link 1</a>
+                <a href="#">Ana Sayfa</a>
               </li>
               <li>
-                <a href="#">Link 2</a>
+                <a href="#">Hakkımızda</a>
               </li>
               <li className="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]">
                 <button
