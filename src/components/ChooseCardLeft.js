@@ -10,11 +10,11 @@ export default function ChooseCardLeft({ icon, text1, text2 }) {
             before:w-0
             before:h-0
             before:z-1
-            before:border-l-[150px]
+            before:border-l-[100px]
             before:translate-x-1
             before:rounded-none
             before:border-l-transparent
-            before:border-b-[150px]
+            before:border-b-[100px]
             before:border-b-white   min-w-80 items-center rounded-xl p-3 w-full flex gap-6">
        
         <div className="bg-orange-500 flex p-3 relative rounded-xl justify-center">

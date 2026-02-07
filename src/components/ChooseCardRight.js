@@ -10,11 +10,11 @@ export default function ChooseCardRight({ icon, text1, text2 }) {
             before:w-0
             before:h-0
             before:z-1
-            before:border-r-[150px]
+            before:border-r-[100px]
             before:translate-x-1
             before:rounded-none
             before:border-r-transparent
-            before:border-t-[150px]
+            before:border-t-[100px]
             before:border-t-white  min-w-80 items-center rounded-xl p-3 w-full flex justify-end gap-6 text-right">
         <div className="flex flex-col">
           <h4 className="font-bold"> {text1} </h4>
