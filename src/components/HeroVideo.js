@@ -1,44 +1,50 @@
 import React, { useEffect, useRef, useState } from "react";
 
 function useCoverRect(containerRef) {
-  const [rect, setRect] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const el = containerRef.current;
-    const ro = new ResizeObserver(() => {
-      const { width, height } = el.getBoundingClientRect();
-      setRect({ width, height });
-    });
-
-    ro.observe(el);
-    // initial
-    const { width, height } = el.getBoundingClientRect();
-    setRect({ width, height });
-
-    return () => ro.disconnect();
-  }, [containerRef]);
-
-  // For a 16:9 video, compute dimensions that cover the container
-  const videoAR = 16 / 9;
-  const { width: cw, height: ch } = rect;
-
-  let w = cw;
-  let h = cw / videoAR;
-
-  // If that height isn't enough, base on height instead
-  if (h < ch) {
-    h = ch;
-    w = ch * videoAR;
+    const [rect, setRect] = useState({ width: 0, height: 0 });
+  
+    useEffect(() => {
+      if (!containerRef.current) return;
+  
+      const el = containerRef.current;
+      const ro = new ResizeObserver(() => {
+        const { width, height } = el.getBoundingClientRect();
+        setRect({ width, height });
+      });
+  
+      ro.observe(el);
+      return () => ro.disconnect();
+    }, [containerRef]);
+  
+    const videoAR = 16 / 9;
+    const { width: cw, height: ch } = rect;
+  
+    let w = cw;
+    let h = cw / videoAR;
+  
+    if (h < ch) {
+      h = ch;
+      w = ch * videoAR;
+    }
+  
+    // Detect mobile (or small screens)
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  
+    // Limit width to viewport width on mobile
+    if (isMobile) {
+      const vw = window.innerWidth;
+      if (w > vw) {
+        w = vw;
+        h = vw / videoAR;
+      }
+    }
+  
+    // small buffer
+    w *= 1.02;
+    h *= 1.02;
+  
+    return { w, h };
   }
-
-  // tiny buffer to avoid 1px edges on some devices
-  w *= 1.02;
-  h *= 1.02;
-
-  return { w, h };
-}
 
 export default function HeroYouTubeBgCover() {
   const sectionRef = useRef(null);
