@@ -15,7 +15,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`${isSticky ? "my-0 w-full fixed z-99 top-0": "my-6 w-9/10 absolute z-99  left-1/2 -translate-x-1/2 top-5"} navbar transition-all duration-500 rounded-none  mx-auto shadow-base-300/20 shadow-sm`}>
+      <nav  className={[
+    "navbar transition-all duration-500 rounded-none mx-auto shadow-base-300/20 shadow-sm",
+    isSticky
+      ? "fixed top-0 left-0 right-0 z-99 my-0 w-full"
+      : "absolute top-5 left-0 right-0 z-99 my-6 w-full",
+  ].join(" ")}>
         <div className="w-full md:flex md:items-center md:gap-2">
           <div className="flex items-center justify-between">
             <div className="navbar-start items-center justify-between max-md:w-full">
