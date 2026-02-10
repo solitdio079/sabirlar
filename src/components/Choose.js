@@ -9,7 +9,7 @@ import ChooseCardRight from "./ChooseCardRight"
 import ChooseCardLeft from "./ChooseCardLeft"
 export default function Choose(){
     return(<div>
-        <div className="flex my-12 p-10 flex-col gap-6 w-full justify-center text-center">
+        <div className="flex my-12 p-10 flex-col gap-6 w-full max-w-screen justify-center text-center">
             <h5 className="uppercase text-sm text-primary">Why choose us</h5>
             <h2 className="text-2xl lg:text-6xl font-bold">Transportation Services We Are Often Considered</h2>
         </div>
