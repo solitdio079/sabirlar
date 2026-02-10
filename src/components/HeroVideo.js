@@ -125,10 +125,9 @@ export default function HeroVideo() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden bg-black"
+      className="relative min-h-screen w-full max-w-full overflow-hidden bg-black"
     >
-      {/* Background layer */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         {mounted && baseW > 0 && baseH > 0 && (
           <div
             className="pointer-events-none absolute left-1/2 top-1/2"
@@ -143,7 +142,6 @@ export default function HeroVideo() {
           </div>
         )}
 
-        {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
     </section>
