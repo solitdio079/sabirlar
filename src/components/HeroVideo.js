@@ -1,46 +1,64 @@
 import React, { useEffect, useRef, useState } from "react";
 
-function useCoverBox(containerRef) {
-  const [rect, setRect] = useState({ cw: 0, ch: 0 });
+function useCoverSizing(containerRef) {
+  const [size, setSize] = useState({
+    baseW: 0,
+    baseH: 0,
+    scale: 1,
+  });
 
   useEffect(() => {
     if (!containerRef.current) return;
+
+    const AR = 16 / 9;
     const el = containerRef.current;
 
-    const ro = new ResizeObserver(() => {
-      const { width, height } = el.getBoundingClientRect();
-      setRect({ cw: width, ch: height });
-    });
+    const calc = () => {
+      const { width: cw, height: ch } = el.getBoundingClientRect();
+      if (!cw || !ch) return;
 
+      // 1) Compute TRUE cover dimensions (like object-cover)
+      let coverW = cw;
+      let coverH = cw / AR;
+
+      if (coverH < ch) {
+        coverH = ch;
+        coverW = ch * AR;
+      }
+
+      // 2) On mobile, cap the BASE width to viewport width, but keep cover via scale
+      const vw = window.innerWidth || cw;
+      const isMobile = vw < 768;
+
+      const baseW = isMobile ? Math.min(coverW, vw) : coverW;
+      const baseH = baseW / AR;
+
+      const scale = coverW / baseW; // >= 1 on tall phones
+
+      // tiny buffer to avoid 1px edges
+      setSize({
+        baseW: baseW * 1.02,
+        baseH: baseH * 1.02,
+        scale: scale * 1.02,
+      });
+    };
+
+    calc();
+
+    const ro = new ResizeObserver(calc);
     ro.observe(el);
-    const { width, height } = el.getBoundingClientRect();
-    setRect({ cw: width, ch: height });
 
-    return () => ro.disconnect();
+    window.addEventListener("resize", calc);
+    window.addEventListener("orientationchange", calc);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", calc);
+      window.removeEventListener("orientationchange", calc);
+    };
   }, [containerRef]);
 
-  const AR = 16 / 9;
-  const { cw, ch } = rect;
-
-  // True cover size (may be wider than viewport on tall phones)
-  let coverW = cw;
-  let coverH = cw / AR;
-  if (coverH < ch) {
-    coverH = ch;
-    coverW = ch * AR;
-  }
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const vw = typeof window !== "undefined" ? window.innerWidth : coverW;
-
-  // Cap the *base* width on mobile, BUT keep cover via transform scale.
-  const baseW = isMobile ? Math.min(coverW, vw) : coverW;
-  const baseH = baseW / AR;
-
-  const scale = coverW / baseW; // >= 1 on tall phones
-
-  // tiny buffer to avoid 1px edges
-  return { baseW: baseW * 1.02, baseH: baseH * 1.02, scale: scale * 1.02 };
+  return size;
 }
 
 export default function HeroVideo() {
@@ -49,7 +67,7 @@ export default function HeroVideo() {
   const [mounted, setMounted] = useState(false);
 
   const videoId = "F5xEe8fY9Qc";
-  const { baseW, baseH, scale } = useCoverBox(sectionRef);
+  const { baseW, baseH, scale } = useCoverSizing(sectionRef);
 
   useEffect(() => setMounted(true), []);
 
@@ -67,7 +85,7 @@ export default function HeroVideo() {
           controls: 0,
           playsinline: 1,
           loop: 1,
-          playlist: videoId,
+          playlist: videoId, // required for loop
           modestbranding: 1,
           rel: 0,
           iv_load_policy: 3,
@@ -83,29 +101,37 @@ export default function HeroVideo() {
       });
     };
 
+    // Load API once
     if (!window.YT) {
       const tag = document.createElement("script");
-     
       tag.src = "https://www.youtube.com/iframe_api";
       document.body.appendChild(tag);
     }
 
-    if (window.YT?.Player) createPlayer();
-    else {
-      const prev = window.onYouTubeIframeAPIReady;
-      window.onYouTubeIframeAPIReady = () => {
-        prev?.();
-        createPlayer();
-      };
+    // If already ready
+    if (window.YT?.Player) {
+      createPlayer();
+      return;
     }
+
+    // Wait for readiness
+    const prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      prev?.();
+      createPlayer();
+    };
   }, [mounted]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen overflow-hidden bg-black">
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen overflow-hidden bg-black"
+    >
+      {/* Background layer */}
       <div className="absolute inset-0">
-        {mounted && (
+        {mounted && baseW > 0 && baseH > 0 && (
           <div
-            className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="pointer-events-none absolute left-1/2 top-1/2"
             style={{
               width: `${baseW}px`,
               height: `${baseH}px`,
@@ -117,16 +143,8 @@ export default function HeroVideo() {
           </div>
         )}
 
+        {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black/50" />
-      </div>
-
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6">
-        <div className="text-white">
-          <h1 className="text-4xl font-bold md:text-6xl">Hero Title</h1>
-          <p className="mt-4 max-w-xl text-lg text-white/90">
-            No black bars on mobile + capped base width.
-          </p>
-        </div>
       </div>
     </section>
   );
