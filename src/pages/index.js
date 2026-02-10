@@ -10,11 +10,11 @@ import Team from "../components/Team"
 import Process from "../components/Process"
 import FAQ from "../components/FAQ"
 import Seo from "../components/Seo"
-import HeroYoutubeBg from "../components/HeroVideo"
+import HeroVideo from "../components/HeroVideo"
 export default function IndexPage() {
   return (
     <Layout>
-      <HeroYoutubeBg/>
+      <HeroVideo/>
       <About/>
       <SliderText/>
       <Services/>
