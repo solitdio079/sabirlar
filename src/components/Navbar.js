@@ -56,47 +56,7 @@ export default function Navbar() {
               <li>
                 <Link to="/contact">İletişim</Link>
               </li>
-              <li className="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]">
-                <button
-                  id="dropdown-link"
-                  type="button"
-                  className="dropdown-toggle dropdown-open:bg-base-content/10 dropdown-open:text-base-content"
-                  aria-haspopup="menu"
-                  aria-expanded="false"
-                  aria-label="Dropdown"
-                >
-                  Parent
-                  <span className="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
-                </button>
-                <ul
-                  className="dropdown-menu dropdown-open:opacity-100 hidden"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="dropdown-link"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Link 3
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Link 4
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Link 5
-                    </a>
-                  </li>
-                  <hr className="border-base-content/25 -mx-2" />
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Link 6
-                    </a>
-                  </li>
-                </ul>
-              </li>
+              
             </ul>
           </div>
         </div>
