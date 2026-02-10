@@ -19,7 +19,7 @@ export default function Navbar() {
     "navbar transition-all duration-500 rounded-none mx-auto shadow-base-300/20 shadow-sm",
     isSticky
       ? "fixed top-0 left-0 right-0 z-99 my-0 w-full"
-      : "absolute top-5 left-0 right-0 z-99 my-6 w-full",
+      : "absolute top-5 left-0 right-0 z-99 my-6 w-[90%]",
   ].join(" ")}>
         <div className="w-full md:flex md:items-center md:gap-2">
           <div className="flex items-center justify-between">
