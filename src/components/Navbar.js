@@ -23,8 +23,8 @@ export default function Navbar() {
             : "absolute top-5 left-0 right-0 z-99 my-6 w-[90%]",
         ].join(" ")}
       >
-        <div className="mx-auto w-[90%] max-w-6xl">
-          <div className="w-full md:flex md:items-center md:gap-2">
+        <div className="w-full md:flex md:items-center md:gap-2">
+          <div className="flex items-center justify-between">
             <div className="navbar-start items-center justify-between max-md:w-full">
               <a
                 className="link text-base-content link-neutral text-xl font-bold no-underline"
