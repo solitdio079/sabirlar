@@ -3,10 +3,14 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `gatsby-template`,
-    siteUrl: `https://www.yourdomain.tld`,
+   
+    title: `öz SABIRLAR`,
+    description: `öz SABIRLAR - Hurda & Nakliye & Vinç - Timur Sabırlar Ltd.Şti`,
+    image: `/app-img.png`,
+    siteUrl: `https://sabirlar.com/`,
   },
   plugins: [
+    "gatsby-plugin-sitemap",
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-postcss',

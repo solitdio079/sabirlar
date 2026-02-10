@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-
+import { Link } from "gatsby";
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -45,10 +45,16 @@ export default function Navbar() {
           >
             <ul className="menu md:menu-horizontal gap-2 p-0 text-base max-md:mt-2">
               <li>
-                <a href="#">Ana Sayfa</a>
+                <Link to="/">Ana Sayfa</Link>
               </li>
               <li>
-                <a href="#">Hakkımızda</a>
+                <Link to="/about">Hakkımızda</Link>
+              </li>
+              <li>
+                <Link to="/service">Servislerimiz</Link>
+              </li>
+              <li>
+                <Link to="/contact">İletişim</Link>
               </li>
               <li className="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]">
                 <button
