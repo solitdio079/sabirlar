@@ -1,11 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 function useCoverSizing(containerRef) {
-  const [size, setSize] = useState({
-    baseW: 0,
-    baseH: 0,
-    scale: 1,
-  });
+  const [size, setSize] = useState({ baseW: 0, baseH: 0, scale: 1 });
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -17,7 +13,6 @@ function useCoverSizing(containerRef) {
       const { width: cw, height: ch } = el.getBoundingClientRect();
       if (!cw || !ch) return;
 
-      // 1) Compute TRUE cover dimensions (like object-cover)
       let coverW = cw;
       let coverH = cw / AR;
 
@@ -26,16 +21,14 @@ function useCoverSizing(containerRef) {
         coverW = ch * AR;
       }
 
-      // 2) On mobile, cap the BASE width to viewport width, but keep cover via scale
       const vw = window.innerWidth || cw;
       const isMobile = vw < 768;
 
       const baseW = isMobile ? Math.min(coverW, vw) : coverW;
       const baseH = baseW / AR;
 
-      const scale = coverW / baseW; // >= 1 on tall phones
+      const scale = coverW / baseW;
 
-      // tiny buffer to avoid 1px edges
       setSize({
         baseW: baseW * 1.02,
         baseH: baseH * 1.02,
@@ -44,7 +37,6 @@ function useCoverSizing(containerRef) {
     };
 
     calc();
-
     const ro = new ResizeObserver(calc);
     ro.observe(el);
 
@@ -66,7 +58,8 @@ export default function HeroVideo() {
   const playerRef = useRef(null);
   const [mounted, setMounted] = useState(false);
 
-  const videoId = "F5xEe8fY9Qc";
+  const videoId = "ekuTP-Mc2MY";
+  const SPEED = 1.75; // ✅ change this: 1.25, 1.5, 2, etc.
   const { baseW, baseH, scale } = useCoverSizing(sectionRef);
 
   useEffect(() => setMounted(true), []);
@@ -85,7 +78,7 @@ export default function HeroVideo() {
           controls: 0,
           playsinline: 1,
           loop: 1,
-          playlist: videoId, // required for loop
+          playlist: videoId,
           modestbranding: 1,
           rel: 0,
           iv_load_policy: 3,
@@ -95,26 +88,30 @@ export default function HeroVideo() {
         events: {
           onReady: (e) => {
             e.target.mute();
+            e.target.setPlaybackRate(SPEED); // ✅ set speed
             e.target.playVideo();
+          },
+          onStateChange: (e) => {
+            // ✅ looping can reset speed; re-apply once it's playing
+            if (e.data === window.YT.PlayerState.PLAYING) {
+              e.target.setPlaybackRate(SPEED);
+            }
           },
         },
       });
     };
 
-    // Load API once
     if (!window.YT) {
       const tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
       document.body.appendChild(tag);
     }
 
-    // If already ready
     if (window.YT?.Player) {
       createPlayer();
       return;
     }
 
-    // Wait for readiness
     const prev = window.onYouTubeIframeAPIReady;
     window.onYouTubeIframeAPIReady = () => {
       prev?.();
@@ -125,12 +122,12 @@ export default function HeroVideo() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen w-screen max-w-screen overflow-hidden bg-black"
+      className="relative min-h-screen w-full max-w-full overflow-hidden bg-black"
     >
-      <div className="absolute z-10 inset-0 overflow-hidden max-w-screen">
+      <div className="absolute inset-0 overflow-hidden">
         {mounted && baseW > 0 && baseH > 0 && (
           <div
-            className="pointer-events-none absolute left-1/2 top-1/2 max-w-screen"
+            className="pointer-events-none absolute left-1/2 top-1/2"
             style={{
               width: `${baseW}px`,
               height: `${baseH}px`,
@@ -138,11 +135,11 @@ export default function HeroVideo() {
               transformOrigin: "center",
             }}
           >
-            <div id="yt-bg" className="h-full w-full max-w-screen" />
+            <div id="yt-bg" className="h-full w-full" />
           </div>
         )}
 
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-black/5" />
       </div>
     </section>
   );

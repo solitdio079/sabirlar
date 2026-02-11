@@ -3,6 +3,10 @@ import tm1 from "../images/tm1.jpg"
 import tm2 from "../images/tm2.jpg"
 import tm3 from "../images/tm3.jpg"
 import tm4 from "../images/tm4.jpg"
+import melek from "../images/melek.jpeg"
+import merve from "../images/merve.png"
+import timur from "../images/timur.png"
+import samet from "../images/samet.png"
 import TeamCard from "./TeamCard";
 
 export default function Team() {
@@ -18,10 +22,12 @@ export default function Team() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-10">
+        <TeamCard image={timur} name="Timur Sabırlar" job={"Yönetim Kurulu Başkanı"} />
+        <TeamCard image={samet} name="Samet Sabırlar" job={"Yönetim Kurulu Üyesi"} />
+        <TeamCard image={melek} name="Melek Atahan" job={"A sınıfı iş güvenliği uzmanı"} />
+        <TeamCard image={merve} name="Merve Nur Özcan" job={"Muhasebe"} />
         <TeamCard image={tm1} name="Jenny Noah" job={"Operasyon Müdürü"} />
         <TeamCard image={tm2} name="Jenny Mache" job={"Operasyon Müdürü"} />
-        <TeamCard image={tm3} name="Sofia Melisa" job={"Proje Yöneticisi"} />
-        <TeamCard image={tm4} name="Shane Darren" job={"Operasyon Müdürü"} />
       </div>
     </div>
   );
