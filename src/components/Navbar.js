@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "gatsby";
+import logo from "../images/logo.png"
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -26,12 +27,12 @@ export default function Navbar() {
         <div className="w-full md:flex md:items-center md:gap-2">
           <div className="flex items-center justify-between">
             <div className="navbar-start items-center justify-between max-md:w-full">
-              <a
+              <Link
                 className="link text-base-content link-neutral text-xl font-bold no-underline"
                 href="#"
               >
-                Sabirlar
-              </a>
+                <img src={logo} className="w-30 lg:w-60" />
+              </Link>
               <div className="md:hidden">
                 <button
                   type="button"

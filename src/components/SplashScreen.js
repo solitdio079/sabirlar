@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import logo from "../images/icon.png"
+import logo from "../images/logo.png"
 import {motion} from "framer-motion"
 const SplashScreen = () => {
 

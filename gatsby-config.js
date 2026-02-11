@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
    
-    title: `öz SABIRLAR`,
+    title: `öz SABIRLAR   Lojistik`,
     description: `öz SABIRLAR - Hurda & Nakliye & Vinç - Timur Sabırlar Ltd.Şti`,
     image: `/app-img.png`,
     siteUrl: `https://sabirlar.com/`,

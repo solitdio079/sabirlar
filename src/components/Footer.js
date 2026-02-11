@@ -1,13 +1,14 @@
 import * as React from "react" 
 
-
+import logo from "../images/logo.png"
+import { Link } from "gatsby"
 export default function Footer(){
     return (<>
     <footer className="footer bg-base-200/60 p-10">
   <aside className="gap-6">
     <div className="flex items-center gap-2 text-xl font-bold text-base-content">
      
-      <span>öz Sabırlar</span>
+      <Link to="/"><img src={logo} className="w-24" /></Link>
     </div>
     <p className="text-base-content text-sm">Most developer friendly & highly <br />customisable Tailwind UI Kit. </p>
   </aside>

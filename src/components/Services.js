@@ -38,9 +38,9 @@ export default function Services() {
                 </button>
               </div>
             </div>
-            <div className="carousel rounded-box w-full max-w-full overflow-x-hidden">
-              <div className="carousel-body gap-6 opacity-0 w-full max-w-full overflow-x-hidden">
-                <div className="carousel-slide max-w-full">
+            <div className="carousel">
+              <div className="carousel-body">
+                <div className="carousel-slide">
                   <ServiceCard 
                   icon={bus} 
                   image={serv1} 
