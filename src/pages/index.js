@@ -18,10 +18,10 @@ export default function IndexPage() {
       <About/>
       <SliderText/>
       <Services/>
+      <Choose/>
       <IconBanner/>
       <Team/>
-      <Process/>
-      <FAQ/>
+
     </Layout>
   )
 }
