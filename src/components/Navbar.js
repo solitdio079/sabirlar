@@ -31,7 +31,7 @@ export default function Navbar() {
                 className="link text-base-content link-neutral text-xl font-bold no-underline"
                 href="#"
               >
-                <img src={logo} className="w-30 lg:w-60" />
+                <img src={logo} className="w-20 lg:w-60" />
               </Link>
               <div className="md:hidden">
                 <button
