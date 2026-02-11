@@ -26,8 +26,6 @@ export default function Team() {
         <TeamCard image={samet} name="Samet Sabırlar" job={"Yönetim Kurulu Üyesi"} />
         <TeamCard image={melek} name="Melek Atahan" job={"A sınıfı iş güvenliği uzmanı"} />
         <TeamCard image={merve} name="Merve Nur Özcan" job={"Muhasebe"} />
-        <TeamCard image={tm1} name="Jenny Noah" job={"Operasyon Müdürü"} />
-        <TeamCard image={tm2} name="Jenny Mache" job={"Operasyon Müdürü"} />
       </div>
     </div>
   );
