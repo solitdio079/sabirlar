@@ -17,7 +17,7 @@ export default function TeamCard({image,name,job}){
                 after:border-t-[80px]
                 after:border-t-white "> 
                     <img src={image} className="w-full rounded-3xl" />
-                    <button className="btn btn-circle bg-orange-500 text-white absolute bottom-5 right-5"><span className="icon-[tabler--link]"></span></button>
+                    <button className="btn btn-circle bg-primary text-white absolute bottom-5 right-5"><span className="icon-[tabler--link]"></span></button>
                 </div>
                 <h3 className="font-bold text-lg text-center">{name} <br/><p className="font-light"> {job} </p></h3>
                

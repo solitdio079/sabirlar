@@ -20,7 +20,7 @@ export default function ChooseCardRight({ icon, text1, text2 }) {
           <h4 className="font-bold"> {text1} </h4>
           <h4 className="font-bold"> {text2} </h4>
         </div>
-        <div className="bg-orange-500 flex p-3 relative rounded-xl justify-center">
+        <div className="bg-primary flex p-3 relative rounded-xl justify-center">
           <div className="absolute w-1/2 top-0 bg-white h-1 left-1/2 rounded-xl -translate-x-1/2 "></div>
           <img src={icon} className="h-12" />
         </div>

@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png"
+import NavLink from "./NavLink";
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -53,16 +54,16 @@ export default function Navbar() {
           >
             <ul className="menu md:menu-horizontal gap-2 p-0 text-base max-md:mt-2">
               <li>
-                <Link to="/">Ana Sayfa</Link>
+                <NavLink to="/">Ana Sayfa</NavLink>
               </li>
               <li>
-                <Link to="/about">Hakkımızda</Link>
+                <NavLink to="/about">Hakkımızda</NavLink>
               </li>
               <li>
-                <Link to="/service">Servislerimiz</Link>
+                <NavLink to="/service">Servislerimiz</NavLink>
               </li>
               <li>
-                <Link to="/contact">İletişim</Link>
+                <NavLink to="/contact">İletişim</NavLink>
               </li>
             </ul>
           </div>

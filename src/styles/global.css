@@ -11,12 +11,10 @@
 @plugin "flyonui/theme" {
     name: "light";
     default: true;
-   /* --color-primary: #9d7a33;
-    --color-secondary: #0d0d0a;
+    --color-primary: #e63631;
+    --color-secondary: #2e3445;
 
-    --color-base-100: #0d0d0a;
-    --color-base-200: #0e0d0a;
-    --color-base-300: #0e0e0b;*/
+   
 }
 
 
