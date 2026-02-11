@@ -127,10 +127,10 @@ export default function HeroVideo() {
       ref={sectionRef}
       className="relative min-h-screen w-screen max-w-screen overflow-hidden bg-black"
     >
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute z-10 inset-0 overflow-hidden max-w-screen">
         {mounted && baseW > 0 && baseH > 0 && (
           <div
-            className="pointer-events-none absolute left-1/2 top-1/2"
+            className="pointer-events-none absolute left-1/2 top-1/2 max-w-screen"
             style={{
               width: `${baseW}px`,
               height: `${baseH}px`,
@@ -138,7 +138,7 @@ export default function HeroVideo() {
               transformOrigin: "center",
             }}
           >
-            <div id="yt-bg" className="h-full w-full" />
+            <div id="yt-bg" className="h-full w-full max-w-screen" />
           </div>
         )}
 
