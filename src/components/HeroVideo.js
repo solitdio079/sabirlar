@@ -125,7 +125,7 @@ export default function HeroVideo() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen w-full max-w-full overflow-hidden bg-black"
+      className="relative min-h-screen w-screen max-w-screen overflow-hidden bg-black"
     >
       <div className="absolute inset-0 overflow-hidden">
         {mounted && baseW > 0 && baseH > 0 && (
