@@ -4,9 +4,9 @@ import serv1 from "../images/serv-s1.png";
 import serv2 from "../images/serv-s2.png";
 import serv3 from "../images/serv-s3.png";
 import plane from "../images/plane-lg.png";
-import bus from "../images/bus.png";
-import busGear from "../images/bus-gear.png";
-import modal from "../images/modal.svg";
+import bus from "../images/bus.png"
+import busGear from "../images/bus-gear.png"
+import modal from "../images/modal.svg"
 export default function Services() {
   return (
     <>
@@ -38,43 +38,40 @@ export default function Services() {
                 </button>
               </div>
             </div>
+            <div className="carousel">
+              <div className="carousel-body">
+                <div className="carousel-slide">
+                  <ServiceCard 
+                  icon={bus} 
+                  image={serv1} 
+                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
+                  title={"International Transport"} />
+                </div>
 
-            <div className="grid md grid-cols-2 items-center gap-6 lg:grid-cols-3">
-              <ServiceCard
-                icon={bus}
-                image={serv1}
-                text={
-                  "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-                }
-                title={"International Transport"}
-              />
+                <div className="carousel-slide">
+                <ServiceCard 
+                  icon={plane} 
+                  image={serv2} 
+                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
+                  title={"Local Truck Transport"} />
+                </div>
 
-              <ServiceCard
-                icon={plane}
-                image={serv2}
-                text={
-                  "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-                }
-                title={"Local Truck Transport"}
-              />
+                <div className="carousel-slide">
+                <ServiceCard 
+                  icon={busGear} 
+                  image={serv3} 
+                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
+                  title={"Skyline Express"} />
+                </div>
 
-              <ServiceCard
-                icon={busGear}
-                image={serv3}
-                text={
-                  "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-                }
-                title={"Skyline Express"}
-              />
-
-              <ServiceCard
-                icon={modal}
-                image={serv3}
-                text={
-                  "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-                }
-                title={"Multimodal Transport"}
-              />
+                <div className="carousel-slide">
+                <ServiceCard 
+                  icon={modal} 
+                  image={serv3} 
+                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
+                  title={"Multimodal Transport"} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
