@@ -69,7 +69,7 @@ export default function HeroVideo() {
 
     const createPlayer = () => {
       if (playerRef.current) return;
-
+      const MIN_QUALITY = "hd720";
       playerRef.current = new window.YT.Player("yt-bg", {
         videoId,
         playerVars: {
@@ -88,12 +88,14 @@ export default function HeroVideo() {
         events: {
           onReady: (e) => {
             e.target.mute();
+            e.target.setPlaybackQuality(MIN_QUALITY);
             e.target.setPlaybackRate(SPEED); // ✅ set speed
             e.target.playVideo();
           },
           onStateChange: (e) => {
             // ✅ looping can reset speed; re-apply once it's playing
             if (e.data === window.YT.PlayerState.PLAYING) {
+              e.target.setPlaybackQuality(MIN_QUALITY); 
               e.target.setPlaybackRate(SPEED);
             }
           },
