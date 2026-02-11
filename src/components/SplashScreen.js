@@ -8,6 +8,7 @@ const SplashScreen = () => {
     <motion.div
     initial={{ opacity: 1 }}
     animate={{ opacity: 0 }}
+    data-theme="light"
     transition={{ delay: 1.5, duration: 0.5 }} className="flex w-full flex-col h-screen gap-3 justify-center items-center">
     <img src={logo} className="w-48 lg:w-96" alt="" />
     <span className="loading loading-ball"></span>
