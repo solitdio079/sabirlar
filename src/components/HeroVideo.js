@@ -142,7 +142,7 @@ export default function HeroVideo() {
           </div>
         )}
 
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/15" />
       </div>
     </section>
   );
