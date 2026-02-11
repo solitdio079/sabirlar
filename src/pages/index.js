@@ -17,12 +17,7 @@ export default function IndexPage() {
       <HeroVideo/>
       <About/>
       <SliderText/>
-      <Services/>
-      <Choose/>
-      <IconBanner/>
-      <Team/>
-      <Process/>
-      <FAQ/>
+     
     </Layout>
   )
 }
