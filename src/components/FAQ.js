@@ -5,10 +5,10 @@ export default function FAQ() {
     <div>
       <div className="flex my-12 p-10 flex-col gap-6 w-full justify-center text-center">
         <h5 className="uppercase text-sm text-primary">
-          our Expert Team Members
+          bize sorun
         </h5>
         <h2 className="text-2xl lg:text-6xl font-bold">
-          Frequently Asked Questions
+        Sıkça Sorulan Sorular
         </h2>
       </div>
 
@@ -19,7 +19,7 @@ export default function FAQ() {
             aria-controls="payment-arrow-right-collapse"
             aria-expanded="true"
           >
-            When is payment taken for my order?
+           Siparişim için ödeme ne zaman alınır?
             <span className="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180"></span>
           </button>
           <div
@@ -30,9 +30,7 @@ export default function FAQ() {
           >
             <div className="px-5 pb-4">
               <p className="text-base-content/80 font-normal">
-                Payment is taken during the checkout process when you pay for
-                your order. The order number that appears on the confirmation
-                screen indicates payment has been successfully processed.
+              Ödeme, siparişiniz için ödeme yaptığınız ödeme sayfasında alınır. Onay ekranında görünen sipariş numarası, ödemenizin başarıyla işlendiğini gösterir.
               </p>
             </div>
           </div>
@@ -43,7 +41,7 @@ export default function FAQ() {
             aria-controls="delivery-arrow-right-collapse"
             aria-expanded="false"
           >
-            How would you ship my order?
+            Siparişim nasıl gönderilecek?
             <span className="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180"></span>
           </button>
           <div
@@ -54,10 +52,7 @@ export default function FAQ() {
           >
             <div className="px-5 pb-4">
               <p className="text-base-content/80 font-normal">
-                For large products, we deliver your product via a third party
-                logistics company offering you the “room of choice” scheduled
-                delivery service. For small products, we offer free parcel
-                delivery.
+              Büyük ürünler için, ürününüzü kendi lojistik şirketimiz aracılığıyla “tercih edilen oda” planlı teslimat hizmetiyle ulaştırıyoruz. Küçük ürünlerde ise ücretsiz paket teslimatı sunuyoruz.
               </p>
             </div>
           </div>
@@ -68,7 +63,7 @@ export default function FAQ() {
             aria-controls="cancel-arrow-right-collapse"
             aria-expanded="false"
           >
-            Can I cancel my order?
+           Siparişimi iptal edebilir miyim?
             <span className="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180"></span>
           </button>
           <div
@@ -79,8 +74,7 @@ export default function FAQ() {
           >
             <div className="px-5  pb-4">
               <p className="text-base-content/80 font-normal">
-                Scheduled delivery orders can be cancelled 72 hours prior to
-                your selected delivery date for full refund.
+              Planlı teslimat siparişleri, seçtiğiniz teslimat tarihinden 72 saat önce iptal edilebilir ve tam iade sağlanır.
               </p>
             </div>
           </div>

@@ -6,16 +6,16 @@ export default function AboutAvatars() {
   return (
     <div className="my-12 p-10 bg-gray-200">
       <div className="flex my-12 p-10 flex-col gap-6 w-full justify-center text-center">
-        <h5 className="uppercase text-sm text-primary">WORKING PROCESS</h5>
+        <h5 className="uppercase text-sm text-primary">Sürekli İşleyen Süreç</h5>
         <h2 className="text-2xl lg:text-6xl font-bold">
-          Logistics Solutions to Help Businesses
+        İşletmelere Yardımcı Lojistik Çözümler
         </h2>
       </div>
 
       <div className="flex flex-col gap-6 md:flex-row md:justify-between">
-       <Avatar title={"Select Services"} icon={st1} rank={"01"} />
-       <Avatar title={"Parcel Information"} icon={st2} rank={"02"} />
-       <Avatar title={"Transportation"} icon={st3} rank={"03"} />
+       <Avatar title={"Hizmetleri Seçin"} icon={st1} rank={"01"} />
+       <Avatar title={"Gönderi Bilgisi"} icon={st2} rank={"02"} />
+       <Avatar title={"Taşımacılık"} icon={st3} rank={"03"} />
       </div>
     </div>
   );
@@ -35,7 +35,7 @@ function Avatar({rank,icon, title}){
             </div>
           </div>
           <h2 className="text-2xl text-black"> {title} </h2>
-          <p>Lorain Air freight service deliver knowledge opportunity</p>
+          <p>Sabırlar Lojistik, Bilgi ve Fırsat Sunar</p>
         </div>
     </>)
 }

@@ -16,8 +16,7 @@ export default function ProcessCard({title,keyIndex,isActive, handleActive}) {
         <div className="flex flex-col gap-3">
           <h3 className="text-2xl lg:text-4xl"> {title} </h3>
           <p>
-            Our cargo service ensures reduced costs through efficient logistics
-            and streamlined operations.
+          Kargo hizmetimiz, verimli lojistik ve optimize edilmiş operasyonlarla maliyetlerin azaltılmasını sağlar.
           </p>
         </div>
         <button className= {isActive ===keyIndex ? "btn btn-circle bg-primary text-3xl text-white btn-3xl":"btn btn-circle bg-white/15 text-3xl text-white btn-3xl"}>

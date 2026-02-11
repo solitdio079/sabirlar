@@ -10,18 +10,18 @@ export default function Process() {
     <div className="my-12 p-10 bg-gray-900 text-white flex gap-6 flex-col items-center justify-center md:flex-row">
       <div className="flex flex-col gap-6">
         <div className="flex my-12  flex-col gap-6 w-full">
-          <h5 className="uppercase text-sm text-primary">Proven Success</h5>
+          <h5 className="uppercase text-sm text-primary">Kanıtlanmış Başarı</h5>
           <h2 className="text-2xl lg:text-5xl font-bold">
-            We have helped clients optimize all logistics operations.
+          Müşterilerimizin tüm lojistik operasyonlarını optimize etmelerine yardımcı olduk.
           </h2>
         </div>
 
         
 
         <div className="flex flex-col  gap-6">
-            <ProcessCard title={"Air Freight Solution"} keyIndex={0} handleActive={handleActive} isActive={isActive} />
-            <ProcessCard title={"Warehouse Inventory"} keyIndex={1} handleActive={handleActive} isActive={isActive} />
-            <ProcessCard title={"By Road Instant Solution"} keyIndex={2} handleActive={handleActive} isActive={isActive} />
+            <ProcessCard title={"Hava Kargo Çözümleri"} keyIndex={0} handleActive={handleActive} isActive={isActive} />
+            <ProcessCard title={"Depo Envanteri"} keyIndex={1} handleActive={handleActive} isActive={isActive} />
+            <ProcessCard title={"Karayolu Hızlı Çözümler"} keyIndex={2} handleActive={handleActive} isActive={isActive} />
         </div>
       </div>
       <div className="w-full flex items-end relative after:content-['']

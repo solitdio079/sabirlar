@@ -16,56 +16,39 @@ export default function Service() {
     <Layout>
           <Breadcrumb title={"Servislerimiz"} />
       <div className="grid gap-6 p-10  md:grid-cols-2 lg:grid-cols-3">
-        <ServiceCard
-          icon={bus}
-          image={serv1}
-          text={
-            "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-          }
-          title={"International Transport"}
-        />
-        <ServiceCard
-          icon={plane}
-          image={serv2}
-          text={
-            "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-          }
-          title={"Local Truck Transport"}
-        />
+        <ServiceCard 
+                          icon={bus} 
+                          image={serv1} 
+                          text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                          title={"Uluslararası Taşımacılık"} />
+        <ServiceCard 
+                         icon={plane} 
+                         image={serv2} 
+                         text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                         title={"Yerel Kamyon Taşımacılığı"} />
 
-        <ServiceCard
-          icon={busGear}
-          image={serv3}
-          text={
-            "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-          }
-          title={"Skyline Express"}
-        />
+        <ServiceCard 
+                         icon={busGear} 
+                         image={serv3} 
+                         text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                         title={"Skyline Express"} />
 
-        <ServiceCard
-          icon={modal}
-          image={serv3}
-          text={
-            "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-          }
-          title={"Multimodal Transport"}
-        />
-         <ServiceCard
-          icon={bus}
-          image={serv1}
-          text={
-            "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-          }
-          title={"International Transport"}
-        />
-        <ServiceCard
-          icon={plane}
-          image={serv2}
-          text={
-            "At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"
-          }
-          title={"Local Truck Transport"}
-        />
+        <ServiceCard 
+                         icon={modal} 
+                         image={serv3} 
+                         text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                         title={"Çok Modlu Taşımacılık"} />
+          <ServiceCard 
+                         icon={busGear} 
+                         image={serv3} 
+                         text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                         title={"Skyline Express"} />
+
+        <ServiceCard 
+                          icon={bus} 
+                          image={serv1} 
+                          text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                          title={"Uluslararası Taşımacılık"} />
       </div>
 
       <FAQ/>

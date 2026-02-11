@@ -10,18 +10,18 @@ export default function Team() {
     <div className="my-12 flex flex-col gap-6 p-10">
       <div className="flex flex-col items-center justify-center space-y-4">
         <p className="text-primary text-sm font-medium uppercase">
-          our Expert Team Members
+        Uzman Ekip Üyelerimiz
         </p>
         <h2 className="text-base-content text-2xl font-semibold md:text-4xl lg:text-6xl">
-          Meet our Special Support Team Members!
+        Özel Destek Ekibimizle Tanışın
         </h2>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-10">
-        <TeamCard image={tm1} name="Jenny Noah" job={"Head of operations"} />
-        <TeamCard image={tm2} name="Jenny Mache" job={"Head of operations"} />
-        <TeamCard image={tm3} name="Sofia Melisa" job={"Project Manager"} />
-        <TeamCard image={tm4} name="Shane Darren" job={"Head of operations"} />
+        <TeamCard image={tm1} name="Jenny Noah" job={"Operasyon Müdürü"} />
+        <TeamCard image={tm2} name="Jenny Mache" job={"Operasyon Müdürü"} />
+        <TeamCard image={tm3} name="Sofia Melisa" job={"Proje Yöneticisi"} />
+        <TeamCard image={tm4} name="Shane Darren" job={"Operasyon Müdürü"} />
       </div>
     </div>
   );

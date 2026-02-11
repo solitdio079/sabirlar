@@ -15,8 +15,7 @@ export default function Service() {
               İletişime Geçin
             </h2>
             <p className="text-base-content text-md md:text-lg lg:text-xl">
-              Reach out for inquiries, support, or collaboration—we’d love to
-              hear from you!
+            Sorular, destek veya iş birliği için bize ulaşın — sizden haber almayı çok isteriz!
             </p>
           </div>
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -25,7 +24,7 @@ export default function Service() {
                 <div>
                   <label className="label-text" htmlFor="firstName">
                     {" "}
-                    First Name{" "}
+                    Ad{" "}
                   </label>
                   <input
                     type="text"
@@ -38,7 +37,7 @@ export default function Service() {
                 <div>
                   <label className="label-text" htmlFor="lastName">
                     {" "}
-                    Last Name{" "}
+                    Soyad{" "}
                   </label>
                   <input
                     type="text"
@@ -51,7 +50,7 @@ export default function Service() {
                 <div>
                   <label className="label-text" htmlFor="email">
                     {" "}
-                    Email{" "}
+                    E-posta{" "}
                   </label>
                   <input
                     type="email"
@@ -65,7 +64,7 @@ export default function Service() {
                 <div>
                   <label className="label-text" htmlFor="textareaLabel">
                     {" "}
-                    Message{" "}
+                    Mesaj{" "}
                   </label>
                   <textarea
                     className="textarea"
@@ -74,7 +73,7 @@ export default function Service() {
                   ></textarea>
                 </div>
                 <div>
-                  <h3 className="font-bold mb-5">Services</h3>
+                  <h3 className="font-bold mb-5">Servilerimiz</h3>
                   <fieldset className="flex gap-5 justify-between flex-col lg:flex-row">
                     <div className="flex flex-col gap-3">
                       <div className="flex items-center gap-1">
@@ -87,7 +86,7 @@ export default function Service() {
                           className="label-text text-base"
                           htmlFor="defaultCheckbox1"
                         >
-                          Web Design
+                          Uluslararası Taşımacılık
                         </label>
                       </div>
                       <div className="flex items-center gap-1">
@@ -100,7 +99,7 @@ export default function Service() {
                           className="label-text text-base"
                           htmlFor="defaultCheckbox2"
                         >
-                          UX Design
+                          Çok Modlu Taşımacılık
                         </label>
                       </div>
                     </div>
@@ -115,7 +114,7 @@ export default function Service() {
                           className="label-text text-base"
                           htmlFor="defaultCheckbox1"
                         >
-                          Content Creation
+                          Skyline Express
                         </label>
                       </div>
                       <div className="flex items-center gap-1">
@@ -128,7 +127,7 @@ export default function Service() {
                           className="label-text text-base"
                           htmlFor="defaultCheckbox2"
                         >
-                          Strategy & Consulting
+                          Yerel Kamyon Taşımacılığı
                         </label>
                       </div>
                     </div>
@@ -139,7 +138,7 @@ export default function Service() {
                   className="btn btn-primary btn-next"
                   data-stepper-next-btn=""
                 >
-                  <span className="">Send</span>
+                  <span className="">Gönder</span>
                   <span className="icon-[tabler--send] text-primary-content size-5 rtl:rotate-180"></span>
                 </button>
               </form>
@@ -152,7 +151,7 @@ export default function Service() {
                   src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 >
                   <a href="https://www.mapsdirections.info/fr/calculer-la-population-sur-une-carte">
-                    Carte démographique
+                  Demografik Harita
                   </a>
                 </iframe>
               </div>
@@ -166,8 +165,8 @@ export default function Service() {
                 <span className="icon-[tabler--send] text-primary-content size-8 rtl:rotate-180 "></span>
               </Link>
 
-              <h5 className="card-title mb-2.5 text-xl">Chat to Sales</h5>
-              <p className="mb-4">Speak to our friendly team</p>
+              <h5 className="card-title mb-2.5 text-xl">Satış ile Sohbet</h5>
+              <p className="mb-4">Dost Canlısı Ekibimizle Konuşun</p>
               <div className="card-actions">
                 <button className="btn btn-outline w-full">
                   sales@gmail.com
@@ -181,8 +180,8 @@ export default function Service() {
                 <span className="icon-[tabler--messages] text-primary-content size-8 rtl:rotate-180 "></span>
               </Link>
 
-              <h5 className="card-title mb-2.5 text-xl">Chat to Sales</h5>
-              <p className="mb-4">Speak to our friendly team</p>
+              <h5 className="card-title mb-2.5 text-xl">Satış ile Sohbet</h5>
+              <p className="mb-4">Dost Canlısı Ekibimizle Konuşun</p>
               <div className="card-actions">
                 <button className="btn btn-outline w-full">
                   johndoe@gmail.com
@@ -196,10 +195,10 @@ export default function Service() {
                 <span className="icon-[tabler--map-pin] text-primary-content size-8 rtl:rotate-180 "></span>
               </Link>
 
-              <h5 className="card-title mb-2.5 text-xl">Chat to Sales</h5>
-              <p className="mb-4">Speak to our friendly team</p>
+              <h5 className="card-title mb-2.5 text-xl">Satış ile Sohbet</h5>
+              <p className="mb-4">Dost Canlısı Ekibimizle Konuşun</p>
               <div className="card-actions">
-                <button className="btn btn-outline w-full">View on maps</button>
+                <button className="btn btn-outline w-full">Haritada Görüntüle</button>
               </div>
             </div>
           </div>
@@ -209,11 +208,11 @@ export default function Service() {
                 <span className="icon-[tabler--phone] text-primary-content size-8 rtl:rotate-180 "></span>
               </Link>
 
-              <h5 className="card-title mb-2.5 text-xl">Chat to Sales</h5>
-              <p className="mb-4">Speak to our friendly team</p>
+              <h5 className="card-title mb-2.5 text-xl">Satış ile Sohbet</h5>
+              <p className="mb-4">Dost Canlısı Ekibimizle Konuşun</p>
               <div className="card-actions">
                 <button className="btn btn-outline w-full">
-                  +90 536 461 35 55
+                  +90 500 000 30 00
                 </button>
               </div>
             </div>

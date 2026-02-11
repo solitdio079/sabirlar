@@ -28,20 +28,20 @@ export default function AboutCard() {
           />
 
           <h1 className="text-3xl lg:text-6xl text-black">
-            Digital & Trusted Transport Logistic Company
+          Dijital ve Güvenilir Taşımacılık Lojistik Şirketi
           </h1>
 
           <Link className="btn btn-primary max-w-60" to="#">
-            Request Quote{" "}
+          Teklif Al{" "}
             <span className="icon-[tabler--arrow-up-right]"></span>{" "}
           </Link>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6">
-            <Card title={"Years Of Experience"} icon={modal} numb={25} />
-            <Card title={"Global Locations"} icon={water} bgColor="bg-primary/50" textColor={"text-white"} numb={88} />
-            <Card title={"Total Employee"} icon={air} bgColor="bg-gray-900" textColor={"text-white"} numb={15} />
-            <Card title={"Annual Revenue"} icon={cond} numb={"7.5 K"} />
+            <Card title={"Yılların Deneyimi"} icon={modal} numb={25} />
+            <Card title={"Küresel Lokasyonlar"} icon={water} bgColor="bg-primary/50" textColor={"text-white"} numb={88} />
+            <Card title={"Toplam Çalışan Sayısı"} icon={air} bgColor="bg-gray-900" textColor={"text-white"} numb={15} />
+            <Card title={"Yıllık Gelir"} icon={cond} numb={"7.5 K"} />
           
         </div>
       </div>
@@ -72,7 +72,7 @@ function Card({numb, title,icon, bgColor="bg-gray-400/50", textColor}){
               <h1 className="text-6xl"> {numb} </h1>
             </div>
             <hr className="bg-gray-200" />
-            <p>With over four decades of experience providing</p>
+            <p>Kırk yılı aşkın deneyimle hizmet sunarak</p>
           </div>
     </>)
 }

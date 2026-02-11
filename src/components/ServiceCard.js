@@ -31,11 +31,11 @@ export default function ServiceCard({icon,image,text,title}) {
       </p>
       <hr />
       <div className="flex gap-6 items-center">
-        <Link className="btn btn-primary">
+        <Link className="btn btn-primary" to="/service">
           {" "}
           <span className="icon-[tabler--arrow-right]"></span>{" "}
         </Link>
-        <p className="font-bold">View Details</p>
+        <p className="font-bold">Detayları Görüntüle</p>
       </div>
     </div>
   );

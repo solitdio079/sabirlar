@@ -20,10 +20,10 @@ export default function Services() {
             <div>
               <div className="space-y-4">
                 <p className="text-primary text-sm font-medium uppercase">
-                  Our Services
+                  Servislerimiz
                 </p>
                 <h2 className="text-base-content text-2xl font-semibold md:text-3xl lg:text-4xl">
-                  Dependable Import Services for Companies of All Sizes
+                Her Ölçekteki Şirket İçin Güvenilir İthalat Hizmetleri
                 </h2>
               </div>
               <div className="mt-10 flex justify-end gap-4">
@@ -44,23 +44,23 @@ export default function Services() {
                   <ServiceCard 
                   icon={bus} 
                   image={serv1} 
-                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
-                  title={"International Transport"} />
+                  text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                  title={"Uluslararası Taşımacılık"} />
                 </div>
 
                 <div className="carousel-slide">
                 <ServiceCard 
                   icon={plane} 
                   image={serv2} 
-                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
-                  title={"Local Truck Transport"} />
+                  text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                  title={"Yerel Kamyon Taşımacılığı"} />
                 </div>
 
                 <div className="carousel-slide">
                 <ServiceCard 
                   icon={busGear} 
                   image={serv3} 
-                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
+                  text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
                   title={"Skyline Express"} />
                 </div>
 
@@ -68,8 +68,8 @@ export default function Services() {
                 <ServiceCard 
                   icon={modal} 
                   image={serv3} 
-                  text={"At TransHub, we revoluti cargo services,log prioritizing precision, efficiency, antransport worldwide connectivity"} 
-                  title={"Multimodal Transport"} />
+                  text={"Sabırlar Lojistik’te, hassasiyet, verimlilik ve dünya çapında bağlantıyı önceliklendiren yenilikçi kargo hizmetleriyle lojistik anlayışını dönüştürüyoruz."} 
+                  title={"Çok Modlu Taşımacılık"} />
                 </div>
               </div>
             </div>
