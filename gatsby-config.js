@@ -3,18 +3,28 @@
  */
 module.exports = {
   siteMetadata: {
-   
-    title: `öz SABIRLAR   Lojistik`,
-    description: `öz SABIRLAR - Hurda & Nakliye & Vinç - Timur Sabırlar Ltd.Şti`,
+    title: `Sabırlar`,
+    description: `Sabırlar - Kastamonu merkezli nakliye, hurda taşımacılığı ve vinç hizmetleri.`,
+    siteUrl: `https://sabirlar.com`,
     image: `/app-img.png`,
-    siteUrl: `https://sabirlar.com/`,
+    author: `Sabırlar`,
+    keywords: [
+      "sabırlar lojistik",
+      "kastamonu lojistik",
+      "kastamonu nakliye",
+      "kastamonu vinç hizmeti",
+      "hurda taşımacılığı",
+      "lojistik firması kastamonu",
+      "tır nakliye kastamonu",
+      "vinç kiralama kastamonu"
+    ],
   },
   plugins: [
-    "gatsby-plugin-sitemap",
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-postcss',
-    `gatsby-transformer-sharp`, // Needed for dynamic images
-    
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ],
-}
+};
