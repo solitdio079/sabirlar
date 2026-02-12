@@ -58,7 +58,7 @@ export default function About() {
               </p>
               <div className="flex flex-col gap-1">
                 <p className="font-light">Bizi İstediğiniz Zaman Arayın:</p>
-                <p className="font-bold text-primary">+90 536 000 11 11</p>
+                <p className="font-bold text-primary">+90 544 760 18 49</p>
               </div>
             </div>
           </div>

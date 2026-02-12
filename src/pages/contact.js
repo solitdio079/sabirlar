@@ -169,7 +169,7 @@ export default function Service() {
               <p className="mb-4">Dost Canlısı Ekibimizle Konuşun</p>
               <div className="card-actions">
                 <button className="btn btn-outline w-full">
-                  sales@gmail.com
+                  sales@sabirlar.com
                 </button>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function Service() {
               <p className="mb-4">Dost Canlısı Ekibimizle Konuşun</p>
               <div className="card-actions">
                 <button className="btn btn-outline w-full">
-                  johndoe@gmail.com
+                  info@sabirlar.com
                 </button>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function Service() {
               <p className="mb-4">Dost Canlısı Ekibimizle Konuşun</p>
               <div className="card-actions">
                 <button className="btn btn-outline w-full">
-                  +90 500 000 30 00
+                  +90 544 760 18 49
                 </button>
               </div>
             </div>

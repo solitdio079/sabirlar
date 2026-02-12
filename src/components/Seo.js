@@ -1,6 +1,6 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 const Seo = ({ title, description, pathname, children }) => {
   const {
@@ -8,15 +8,15 @@ const Seo = ({ title, description, pathname, children }) => {
     description: defaultDescription,
     image,
     siteUrl,
-    keywords
-  } = useSiteMetadata()
+    keywords,
+  } = useSiteMetadata();
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
-  }
+  };
 
   return (
     <Helmet>
@@ -39,10 +39,35 @@ const Seo = ({ title, description, pathname, children }) => {
       <meta name="twitter:image" content={seo.image} />
 
       <link rel="icon" href="/favicon.ico" />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Öz Sabırlar Lojistik",
+          description:
+            "Kastamonu merkezli lojistik firması. Nakliye, hurda taşımacılığı ve vinç hizmetleri.",
+          url: "https://sabirlar.com",
+          image: "https://sabirlar.com/app-img.png",
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: "Kastamonu, Türkiye",
+          },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Kastamonu",
+            addressCountry: "TR",
+          },
+          sameAs: [
+            // sosyal medya linklerin varsa buraya ekle
+            // "https://www.instagram.com/....",
+            // "https://www.facebook.com/...."
+          ],
+        })}
+      </script>
 
       {children}
     </Helmet>
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;
