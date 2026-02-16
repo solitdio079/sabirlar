@@ -14,7 +14,7 @@ export default function About() {
         <div className="flex flex-col gap-6">
           <p className="uppercase text-sm text-primary">Hakkımızda</p>
           <h1 className="text-2xl lg:text-6xl">
-            Neden İşletmeler Lojistik Çözümlerimize Güveniyor
+          Kastamonu Nakliye, Hurda ve Vinç Hizmetleri
           </h1>
           <p>
             Dünya genelinde büyük ölçekli işletmelere çözümler sunma konusunda

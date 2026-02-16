@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Sabırlar`,
-    description: `Sabırlar - Kastamonu merkezli nakliye, hurda taşımacılığı ve vinç hizmetleri.`,
+    title: `Kastamonu Nakliye & Vinç Hizmetleri | Sabırlar`,
+    description: `Sabırlar, Kastamonu merkezli nakliye, hurda taşımacılığı ve vinç kiralama hizmetleri sunar.`,
     siteUrl: `https://sabirlar.com`,
     image: `/app-img.png`,
     author: `Sabırlar`,
