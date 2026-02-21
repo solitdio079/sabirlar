@@ -7,6 +7,7 @@ import melek from "../images/melek.jpeg"
 import merve from "../images/merve.png"
 import timur from "../images/timur.png"
 import samet from "../images/samet.png"
+import umit from "../images/umit.png"
 import TeamCard from "./TeamCard";
 
 export default function Team() {
@@ -26,6 +27,7 @@ export default function Team() {
         <TeamCard image={samet} name="Samet Sabırlar" job={"Yönetim Kurulu Üyesi"} />
         <TeamCard image={melek} name="Melek Atahan" job={"A sınıfı iş güvenliği uzmanı"} />
         <TeamCard image={merve} name="Merve Nur Özcan" job={"Muhasebe"} />
+        <TeamCard image={umit} name="Umit Kökoğlu" job={"Lojistik Müdürü"} />
       </div>
     </div>
   );
